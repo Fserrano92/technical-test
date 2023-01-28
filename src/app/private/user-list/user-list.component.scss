@@ -1,0 +1,25 @@
+.container-user-list {
+    margin: 0px 13%;
+    min-height: 100%;
+
+    h2{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .button{
+        background-color: #055ea9;        
+    }
+
+    .container-button{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 15px;
+    }
+
+    table{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}

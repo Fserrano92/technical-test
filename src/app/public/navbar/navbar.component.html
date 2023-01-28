@@ -1,0 +1,10 @@
+<div class="container-navbar">
+    <img src="{{urlLogo}}" alt="Logo Unicomer">
+    <div class="option-list" *ngIf="optionList.length > 0">
+        <div *ngFor="let option of optionList">
+            <p (click)="href(option.navigation)">
+                {{option.label}}
+            </p>
+        </div>    
+    </div>
+</div>

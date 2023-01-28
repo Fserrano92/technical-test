@@ -1,0 +1,52 @@
+<div class="container-form">    
+    <h2>
+        Formulario para candidatos a clientes
+    </h2>
+    <form [formGroup]="userForm">
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput maxlength="{{firstNameMaxLength}}" formControlName="firstName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput maxlength="{{lastNameMaxLength}}" formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Profesión</mat-label>
+            <input matInput maxlength="{{professionMaxLength}}" formControlName="profession">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Ingreso</mat-label>
+            <input matInput maxlength="{{incomesMaxLength}}" formControlName="incomes">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefono</mat-label>
+            <input matInput maxlength="{{cellPhoneMaxLength}}" formControlName="cellPhone">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefono Local</mat-label>
+            <input matInput maxlength="{{homePhoneMaxLength}}" formControlName="homePhone">
+        </mat-form-field>
+        <mat-form-field class="date" >
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput [matDatepicker]="dp3" formControlName="birthday" >
+            <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Genero</mat-label>
+            <mat-select formControlName="gender">
+                <mat-option value="Neutro">Neutro</mat-option>
+                <mat-option value="Mujer">Mujer</mat-option>
+                <mat-option value="Hombre">Hombre</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Dirección</mat-label>
+            <textarea matInput maxlength="{{addressHomeMaxLength}}" formControlName="addressHome"></textarea>
+        </mat-form-field>
+        <div class="button">
+            <button mat-raised-button color="primary" (click)="saveUser()"> Guardar </button>
+        </div>
+    </form>
+</div>
